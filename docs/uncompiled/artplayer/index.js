@@ -355,7 +355,7 @@ Artplayer.SCROLL_TIME = 200;
 Artplayer.SCROLL_GAP = 50;
 Artplayer.AUTO_PLAYBACK_MAX = 10;
 Artplayer.AUTO_PLAYBACK_TIMEOUT = 3000;
-Artplayer.RECONNECT_TIME_MAX = 5;
+Artplayer.RECONNECT_TIME_MAX = 1;
 Artplayer.RECONNECT_SLEEP_TIME = 1000;
 Artplayer.CONTROL_HIDE_TIME = 3000;
 Artplayer.DB_CLICE_TIME = 300;
@@ -1006,20 +1006,20 @@ exports.default = {
                 ];
                 return (0, _utils.errorHandle)(position.includes(value), `${paths.join(".")} only accept ${position.toString()} as parameters`);
             }
-        }, 
+        },
     ],
     quality: [
         {
             default: `?${b}`,
             html: s,
             url: s
-        }, 
+        },
     ],
     highlight: [
         {
             time: n,
             text: s
-        }, 
+        },
     ],
     thumbnails: {
         url: s,
@@ -1070,7 +1070,7 @@ exports.default = {
         "startDate",
         "textTracks",
         "videoTracks",
-        "volume", 
+        "volume",
     ],
     methods: [
         "addTextTrack",
@@ -1101,7 +1101,7 @@ exports.default = {
         "suspend",
         "timeupdate",
         "volumechange",
-        "waiting", 
+        "waiting",
     ],
     prototypes: [
         "width",
@@ -1124,7 +1124,7 @@ exports.default = {
         "webkitEnterFullScreen",
         "webkitEnterFullscreen",
         "webkitExitFullScreen",
-        "webkitExitFullscreen", 
+        "webkitExitFullscreen",
     ]
 };
 
@@ -1892,7 +1892,7 @@ function getScreenfull() {
             "fullscreenElement",
             "fullscreenEnabled",
             "fullscreenchange",
-            "fullscreenerror", 
+            "fullscreenerror",
         ],
         // New WebKit
         [
@@ -1901,7 +1901,7 @@ function getScreenfull() {
             "webkitFullscreenElement",
             "webkitFullscreenEnabled",
             "webkitfullscreenchange",
-            "webkitfullscreenerror", 
+            "webkitfullscreenerror",
         ],
         // Old WebKit
         [
@@ -1910,7 +1910,7 @@ function getScreenfull() {
             "webkitCurrentFullScreenElement",
             "webkitCancelFullScreen",
             "webkitfullscreenchange",
-            "webkitfullscreenerror", 
+            "webkitfullscreenerror",
         ],
         [
             "mozRequestFullScreen",
@@ -1918,7 +1918,7 @@ function getScreenfull() {
             "mozFullScreenElement",
             "mozFullScreenEnabled",
             "mozfullscreenchange",
-            "mozfullscreenerror", 
+            "mozfullscreenerror",
         ],
         [
             "msRequestFullscreen",
@@ -1926,8 +1926,8 @@ function getScreenfull() {
             "msFullscreenElement",
             "msFullscreenEnabled",
             "MSFullscreenChange",
-            "MSFullscreenError", 
-        ], 
+            "MSFullscreenError",
+        ],
     ];
     const nativeAPI = (()=>{
         const unprefixedMethods = methodMap[0];
